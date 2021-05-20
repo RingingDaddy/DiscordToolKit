@@ -1,22 +1,26 @@
 import json
+import sys
 
 #initialize variables
 
-alttoken = ""
-maintoken = ""
+
+this = sys.modules[__name__]
+
+this.alttoken = None
+this.maintoken = None
 
 def loadsettings():
     with open("settings.json") as file:
         configfile = json.loads(file.read())
         file.close() # Release config file.
 
-    maintoken = configfile['tokens']['main']
-    alttoken  = configfile['tokens']['alt']
+    this.maintoken = configfile['tokens']['main']
+    this.alttoken  = configfile['tokens']['alt']
+    print(maintoken)
     
 
 def __main__():
     loadsettings()
-    print("LOADED SUCCESFULLY")
 
-if(__name__ == "__main__"):
+if(__name__ == 'settingmanager'):
     __main__()
