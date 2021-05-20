@@ -14,6 +14,7 @@ To install dependencies:
 	
     
     # pip3 install discord
+    # pip3 install colorama
     
 
 **THIS APPLICATION IS AGAINST DISCORD TOS, I TAKE NO RESPONSIBILITY FOR WHAT HAPPENS TO YOUR ACCOUNT IF YOU USE IT**
