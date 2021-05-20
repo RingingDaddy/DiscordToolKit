@@ -18,7 +18,6 @@ def loadsettings():
 def get_setting(field, field2 = None):
     #TODO: make this not be extremely stupid
     if(field2 != None):
-        print("configfile[{}][{}]".format(field, field2))
         return configfile[field][field2]
     else:
         return configfile[field]

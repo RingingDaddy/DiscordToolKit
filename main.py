@@ -14,6 +14,6 @@ class colors:
 print(colors.CYAN + 'Initializing DiscordToolkit...')
 
 print('Main token: ' + settingmanager.get_setting("tokens", "main"))
-print('Alt token: '  + settingmanager.get_setting("testval"))
+print('Alt token: '  + settingmanager.get_setting("tokens", "alt"))
 
     
