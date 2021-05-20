@@ -17,10 +17,7 @@ class colors:
 
 if __name__ == "__main__":
 
-    format = "%(asctime)s: %(message)s"
-    logging.basicConfig(format=format, level=logging.INFO, datefmt="%H:%M:%S")
-
-    logging.info("Initializing DiscordToolkit...")
+    print("Initializing Discord Toolkit")
 
     print('Main token: ' + settingmanager.get_setting("tokens", "main"))
     print('Alt token: '  + settingmanager.get_setting("tokens", "alt"))
