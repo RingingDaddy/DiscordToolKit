@@ -3,6 +3,10 @@
 import json
 import discord
 import settingmanager
+import selfbot
+import threading
+import logging
+import time
 
 class colors:
     """USAGE: print(colors.COLOR + TEXT + color.NONE) """
@@ -11,9 +15,16 @@ class colors:
     YELLOW = '\033[93m'
     NONE   = '\033[0m'
 
-print(colors.CYAN + 'Initializing DiscordToolkit...')
+if __name__ == "__main__":
 
-print('Main token: ' + settingmanager.get_setting("tokens", "main"))
-print('Alt token: '  + settingmanager.get_setting("tokens", "alt") + colors.NONE)
+    format = "%(asctime)s: %(message)s"
+    logging.basicConfig(format=format, level=logging.INFO, datefmt="%H:%M:%S")
+
+    logging.info("Initializing DiscordToolkit...")
+
+    print('Main token: ' + settingmanager.get_setting("tokens", "main"))
+    print('Alt token: '  + settingmanager.get_setting("tokens", "alt"))
+
+    selfbot.start() #NO CODE WILL BE EXECUTED PAST THIS POINT
 
     
