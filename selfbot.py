@@ -24,8 +24,14 @@ async def on_message(message):
     # Workaround around selfbots being prevented from reading message content not sent by themselves.
     # Instead of accessing .content from the message object, this checks the latest message in message.channel, which results in the same result as message.content
     # This is slightly slower, but works for now.
+    
     async for message in message.channel.history(limit=1):
-        print(f"{Fore.BLACK}{Back.CYAN}" + "[{}:{}:{}] {}: {} | Server: {}".format(now.hour, now.minute, now.second, message.author, message.content, message.guild.name) + Back.RESET)
+
+        
+        if(settingmanager.get_setting("logger", "filterbotmessages") == "True" and message.author.bot == True):
+            pass
+        else:
+            print(f"{Fore.BLACK}{Back.CYAN}" + "[{}:{}:{}] {}: {} | Server: {}".format(now.hour, now.minute, now.second, message.author, message.content, message.guild.name) + Back.RESET)
 
 
 

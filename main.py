@@ -4,9 +4,6 @@ import json
 import discord
 import settingmanager
 import selfbot
-import threading
-import logging
-import time
 
 class colors:
     """USAGE: print(colors.COLOR + TEXT + color.NONE) """
