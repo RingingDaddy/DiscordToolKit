@@ -1,6 +1,9 @@
 {
     "tokens": {
-        "main": "",
+        "main": "MzI3MTkzMTUyMzUwMDYwNTQ0.YKQ4rA.SYt1I565Jk3MqkiJHBhP27V-x9U",
         "alt": ""
+    },
+    "logger": {
+        "filterbotmessages": "True"
     }
 }
