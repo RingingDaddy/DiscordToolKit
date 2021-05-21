@@ -10,6 +10,7 @@ this = sys.modules[__name__]
 this.alttoken = None
 this.maintoken = None
 this.configfile = None
+this.turningoff = False
 
 
 def loadsettings():

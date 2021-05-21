@@ -65,11 +65,14 @@ def main():
     renderPrompt()
 
     while True:
-        try:
-            option = input()
+            try:
+                option = input()
 
-            options[option]()
-
-        except Exception as e:
-            print(
-                f"{Fore.BLACK}{Back.YELLOW}Failed to find option {e}{Style.RESET_ALL}")
+                if(settingmanager.turningoff == False):
+                    options[option]()
+                else:
+                    break
+            except Exception as e:
+                print(
+                    f"{Fore.BLACK}{Back.YELLOW}Failed to find option {e}{Style.RESET_ALL}")
+        
