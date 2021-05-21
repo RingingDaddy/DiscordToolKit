@@ -4,21 +4,33 @@ import json
 import discord
 import settingmanager
 import selfbot
+import menu
+import threading
+from colorama import Back, Fore, Style
+
 
 class colors:
     """USAGE: print(colors.COLOR + TEXT + color.NONE) """
-    CYAN   = '\033[96m'
-    RED    = '\033[91m'
+    CYAN = '\033[96m'
+    RED = '\033[91m'
     YELLOW = '\033[93m'
-    NONE   = '\033[0m'
+    NONE = '\033[0m'
+
 
 if __name__ == "__main__":
 
     print("Initializing Discord Toolkit")
 
     print('Main token: ' + settingmanager.get_setting("tokens", "main"))
-    print('Alt token: '  + settingmanager.get_setting("tokens", "alt"))
+    print('Alt token: ' + settingmanager.get_setting("tokens", "alt"))
 
-    selfbot.start() #NO CODE WILL BE EXECUTED PAST THIS POINT
+    menuthread = threading.Thread(target=menu.begin)
+    menuthread.start()
 
-    
+    try:
+        selfbot.start()  # NO CODE WILL BE EXECUTED PAST THIS POINT
+    except Exception as e:
+        print(f"{Fore.BLACK}{Back.RED}{e}{Style.RESET_ALL}")
+
+    print(f"{Fore.BLACK}{Back.YELLOW}Exitting...{Style.RESET_ALL}")
+    exit()
