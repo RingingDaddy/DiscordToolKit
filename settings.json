@@ -1,9 +1,10 @@
 {
     "tokens": {
-        "main": "MzI3MTkzMTUyMzUwMDYwNTQ0.YKQ4rA.SYt1I565Jk3MqkiJHBhP27V-x9U",
+        "main": "",
         "alt": ""
     },
     "logger": {
-        "filterbotmessages": "True"
+        "filterbotmessages": "True",
+        "logfile": "messages.txt" // Leave empty to disable file logging.
     }
 }
