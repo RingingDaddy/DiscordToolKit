@@ -9,14 +9,6 @@ import threading
 from colorama import Back, Fore, Style
 
 
-class colors:
-    """USAGE: print(colors.COLOR + TEXT + color.NONE) """
-    CYAN = '\033[96m'
-    RED = '\033[91m'
-    YELLOW = '\033[93m'
-    NONE = '\033[0m'
-
-
 def toolkitexit():
     print(f"{Fore.BLACK}{Back.YELLOW}Exitting...{Style.RESET_ALL}")
 
