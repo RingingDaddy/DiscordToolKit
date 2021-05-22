@@ -5,6 +5,6 @@
     },
     "logger": {
         "filterbotmessages": "True",
-        "logfile": "messages.txt" // Leave empty to disable file logging.
+        "logfile": "messages.txt"
     }
 }
